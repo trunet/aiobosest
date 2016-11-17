@@ -8,13 +8,6 @@ Bose SoundTouch Python Wrapper for AsyncIO
 .. image:: https://www.gnu.org/graphics/gplv3-127x51.png
   :target:  https://www.gnu.org/licenses/gpl-3.0.html
 
-Contents:
-
-.. toctree::
-  :maxdepth: 2
-
-  modules
-
 About
 -----
 
