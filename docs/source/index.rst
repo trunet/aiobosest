@@ -1,6 +1,10 @@
 Bose SoundTouch Python Wrapper for AsyncIO
 ==========================================
 
+.. image:: https://readthedocs.org/projects/aiobosest/badge/?version=latest
+:target: http://aiobosest.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
+
 .. image:: https://www.gnu.org/graphics/gplv3-127x51.png
   :target:  https://www.gnu.org/licenses/gpl-3.0.html
 
