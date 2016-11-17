@@ -12,4 +12,4 @@ install:
 
 script:
   - py.test --pep8
-  - python3.5 setup.py test
+  - python -m pytest tests/
