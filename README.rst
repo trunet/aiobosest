@@ -58,10 +58,3 @@ Source code
 
 The latest version is available in a github repository:
 https://github.com/trunet/aiobosest
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

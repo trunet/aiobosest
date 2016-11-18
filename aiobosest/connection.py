@@ -97,9 +97,9 @@ class Connection:
             XML data string
 
         Raises:
-            CallError: malformed requests
-            RequestError: request didn't receive HTTP 200
-            RestConnectionError: other errors"""
+            :class:`aiobosest.errors.CallError`: malformed requests
+            :class:`aiobosest.errors.RequestError`: request didn't receive HTTP 200
+            :class:`aiobosest.errors.RestConnectionError`: other errors"""
         logging.debug('>>> REST URI: http://{address}:8090{uri}'.format(
                         address=self._address, uri=uri))
         try:
@@ -134,9 +134,9 @@ class Connection:
             XML data string
 
         Raises:
-            CallError: malformed requests
-            RequestError: request didn't receive HTTP 200
-            RestConnectionError: other errors"""
+            :class:`aiobosest.errors.CallError`: malformed requests
+            :class:`aiobosest.errors.RequestError`: request didn't receive HTTP 200
+            :class:`aiobosest.errors.RestConnectionError`: other errors"""
         logging.debug('>>> POST {message} ON URI http://{address}:8090{uri}'.format(
                       address=self._address, uri=uri, message=message))
         try:

@@ -64,7 +64,7 @@ class Key(BaseHelper):
             button: Button to be pressed, should match KEY_VALUE
 
         Raises:
-            KeyNotFound: When button is not defined in KEY_VALUE"""
+            :class:`aiobosest.errors.KeyNotFoundError`: When button is not defined in KEY_VALUE"""
         if button not in KEY_VALUE:
             raise KeyNotFound
         for state in KEY_STATE:
