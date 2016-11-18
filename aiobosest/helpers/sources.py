@@ -49,7 +49,7 @@ class Sources(BaseHelper):
         is_updated: asyncio.Event() is set when an update happens
 
     Attributes:
-        sources = :class:`SourceItem` list
+        sources: :class:`SourceItem`: list
     """
     def __init__(self, connection, is_updated=None):
         super().__init__(key_name='sources', is_updated=is_updated)
