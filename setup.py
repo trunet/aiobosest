@@ -14,6 +14,7 @@ config = {
     'setup_requires': ['pytest-runner'],
     'tests_require': ['pytest', 'pytest-asyncio', 'pytest-pep8'],
     'packages': ['aiobosest', 'aiobosest.helpers'],
+    'license': 'GPLv3',
     'scripts': [],
     'name': 'aiobosest',
     'classifiers': [
