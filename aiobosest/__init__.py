@@ -18,6 +18,7 @@ from .aiobosest import BoseSoundTouch
 from .helpers import (
     Key,
     NowPlaying,
+    Sources,
     Volume,
 )
 from .errors import (

@@ -66,10 +66,21 @@ def main():
 
     async def run():
         is_updated.clear()
+        await asyncio.sleep(0.5)
+
+        print('=' * 79)
+        print('Sources:')
+        for sourceItem in bosesoundtouch.sources.sources:
+            print('Source: {} - SourceAccount: {} - Status: {} - isLocal: {} - Name: {}'.format(
+                    sourceItem.source, sourceItem.sourceAccount, sourceItem.status,
+                    sourceItem.isLocal, sourceItem.name))
+
         while True:
             await is_updated.wait()
             is_updated.clear()
+
             print('=' * 79)
+
             print("Volume: {}".format(bosesoundtouch.volume.actualvolume))
             print("Mute: {}".format(bosesoundtouch.volume.muteenabled))
             print("Source: {}".format(bosesoundtouch.nowplaying.source))
