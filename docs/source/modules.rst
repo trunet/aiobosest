@@ -5,4 +5,3 @@ aiobosest
    :maxdepth: 4
 
    aiobosest
-   setup

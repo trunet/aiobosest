@@ -17,6 +17,7 @@
 from .helpers import (
     Key,
     NowPlaying,
+    Presets,
     Sources,
     Volume,
 )
@@ -65,8 +66,11 @@ class BoseSoundTouch:
 
         self.key = Key(connection=self._connection, is_updated=self.is_updated)
         self.nowplaying = NowPlaying(connection=self._connection, is_updated=self.is_updated)
+        self.presets = Presets(connection=self._connection, is_updated=self.is_updated)
         self.sources = Sources(connection=self._connection, is_updated=self.is_updated)
         self.volume = Volume(connection=self._connection, is_updated=self.is_updated)
+
+        self.presets.set_sources(self.sources)
 
         self._reader_task = asyncio.ensure_future(self._read_data(), loop=self._loop)
 
@@ -91,6 +95,7 @@ class BoseSoundTouch:
             await self.key.get()
             await self.nowplaying.get()
             await self.sources.get()
+            await self.presets.get()
             await self.volume.get()
         except RESTConnectionError as e:
             logging.critical('Error connecting to your BoseSoundTouch system, '
@@ -116,4 +121,5 @@ class BoseSoundTouch:
                 await self.key.parse(msg.data)
                 await self.nowplaying.parse(msg.data)
                 await self.sources.parse(msg.data)
+                await self.presets.parse(msg.data)
                 await self.volume.parse(msg.data)

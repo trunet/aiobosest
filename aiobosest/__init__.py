@@ -18,6 +18,7 @@ from .aiobosest import BoseSoundTouch
 from .helpers import (
     Key,
     NowPlaying,
+    Presets,
     Sources,
     Volume,
 )

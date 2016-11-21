@@ -51,6 +51,8 @@ def main():
     browser = ServiceBrowser(zeroconf, "_soundtouch._tcp.local.",
                              handlers=[on_service_state_change])
 
+    BOSE_ADDR = '192.168.178.188'
+
     start = time.time()
     while time.time() < start+3:
         if BOSE_ADDR:
@@ -74,6 +76,11 @@ def main():
             print('Source: {} - SourceAccount: {} - Status: {} - isLocal: {} - Name: {}'.format(
                     sourceItem.source, sourceItem.sourceAccount, sourceItem.status,
                     sourceItem.isLocal, sourceItem.name))
+
+        print('Presets:')
+        for presetItem in bosesoundtouch.presets.presets:
+            print('ID: {} - Source: {} - Name: {}'.format(
+                    presetItem.id, presetItem.source.source, presetItem.itemName))
 
         while True:
             await is_updated.wait()

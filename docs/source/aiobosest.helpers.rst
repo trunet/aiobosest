@@ -28,6 +28,14 @@ aiobosest.helpers.now_playing module
     :undoc-members:
     :show-inheritance:
 
+aiobosest.helpers.presets module
+--------------------------------
+
+.. automodule:: aiobosest.helpers.presets
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 aiobosest.helpers.sources module
 --------------------------------
 

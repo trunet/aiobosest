@@ -20,6 +20,9 @@ from .key import (
 from .now_playing import (
     NowPlaying,
 )
+from .presets import (
+    Presets,
+)
 from .sources import (
     Sources,
 )
@@ -29,6 +32,7 @@ from .volume import (
 __all__ = [
     'Key',
     'NowPlaying',
+    'Presets',
     'Sources',
     'Volume',
 ]
