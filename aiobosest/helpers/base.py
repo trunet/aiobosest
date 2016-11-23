@@ -103,7 +103,7 @@ class BaseHelper:
         updates = xmldata.xpath('/updates')
         if updates:
             updated = updates[0].xpath('./{key_name}Updated/{key_name}'.format(
-                                        key_name=self.key_name))
+                key_name=self.key_name))
             if updated:
                 return updated[0]
         if xmldata.xpath('/{key_name}'.format(key_name=self.key_name)):

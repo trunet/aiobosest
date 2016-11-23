@@ -69,9 +69,9 @@ class Key(BaseHelper):
             raise KeyNotFound
         for state in KEY_STATE:
             msg = '<key state="{state}" sender="Gabbo">{value}</key>'.format(
-                    value=button, state=state)
+                value=button, state=state)
             logging.info('Sending key {value} with state {state}'.format(
-                    value=button, state=state))
+                value=button, state=state))
             try:
                 await self._connection.post(self.uri, msg)
             except RESTConnectionError:

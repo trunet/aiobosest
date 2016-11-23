@@ -74,7 +74,7 @@ class Sources(BaseHelper):
                 sourceItem.sourceAccount = get_first_or_none(item.xpath('./@sourceAccount'))[0]
                 sourceItem.status = get_first_or_none(item.xpath('./@status'))[0]
                 sourceItem.isLocal = True if get_first_or_none(
-                        item.xpath('./@isLocal'))[0] == 'true' else False
+                    item.xpath('./@isLocal'))[0] == 'true' else False
                 sourceItem.name = get_first_or_none(item.xpath('./text()'))[0]
                 self.sources.append(sourceItem)
             super().set_update()

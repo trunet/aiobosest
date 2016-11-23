@@ -54,11 +54,11 @@ class Volume(BaseHelper):
         data = await super().xml_parse(data)
         if data is not None:
             self.targetvolume = int(
-                    get_first_or_none(data.xpath('./targetvolume/text()'))[0] or -1)
+                get_first_or_none(data.xpath('./targetvolume/text()'))[0] or -1)
             self.actualvolume = int(
-                    get_first_or_none(data.xpath('./actualvolume/text()'))[0] or -1)
+                get_first_or_none(data.xpath('./actualvolume/text()'))[0] or -1)
             self.muteenabled = True if get_first_or_none(
-                    data.xpath('./muteenabled/text()'))[0] == 'true' else False
+                data.xpath('./muteenabled/text()'))[0] == 'true' else False
 
             super().set_update()
 

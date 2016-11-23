@@ -101,11 +101,11 @@ class Connection:
             :class:`aiobosest.errors.RequestError`: request didn't receive HTTP 200
             :class:`aiobosest.errors.RestConnectionError`: other errors"""
         logging.debug('>>> REST URI: http://{address}:8090{uri}'.format(
-                        address=self._address, uri=uri))
+            address=self._address, uri=uri))
         try:
             with aiohttp.Timeout(HTTP_REST_TIMEOUT, loop=self._loop):
                 async with self._session.get('http://{address}:8090{uri}'.format(
-                                            address=self._address, uri=uri)) as resp:
+                        address=self._address, uri=uri)) as resp:
                     data = await resp.read()
                     logging.debug('<<< RECEIVED FROM URI http://{address}:8090{uri}: {message}'
                                   .format(address=self._address, uri=uri, message=data))
