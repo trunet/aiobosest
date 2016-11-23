@@ -49,7 +49,8 @@ class Key(BaseHelper):
         """Parse the XML into class properties.
 
         Args:
-            data: string data to be parsed"""
+            data: string data to be parsed
+        """
         data = await super().xml_parse(data)
         if data is not None:
             self.state = get_first_or_none(data.xpath('./@state'))[0] or None
@@ -64,7 +65,8 @@ class Key(BaseHelper):
             button: Button to be pressed, should match KEY_VALUE
 
         Raises:
-            :class:`aiobosest.errors.KeyNotFoundError`: When button is not defined in KEY_VALUE"""
+            :class:`aiobosest.errors.KeyNotFoundError` when button is not defined in KEY_VALUE
+        """
         if button not in KEY_VALUE:
             raise KeyNotFound
         for state in KEY_STATE:
