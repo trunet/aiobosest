@@ -48,9 +48,9 @@ class BoseSoundTouch:
         loop: asyncio loop if you want to provide one
 
     Attributes:
-        key: :class:`.Key` Class
-        nowplaying: :class:`.NowPlaying` Class
-        volume: :class:`.Volume` Class
+        key: :class:`.helpers.key.Key` Class
+        nowplaying: :class:`.helpers.now_playing.NowPlaying` Class
+        volume: :class:`.helpers.volume.Volume` Class
     """
     def __init__(self, address, is_updated=None, loop=None):
         if loop is None:
